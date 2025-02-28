@@ -24,7 +24,7 @@ You will need to add Environment Variables for the items below in order for the 
 - **Password**  
 - **PIN**  
 
-Additionally, there is a placeholder for a Secret Key for extra security. You will need to define a secret key both in the code and wherever you host it.
+Additionally, there is a placeholder for a Secret Key for extra security. You will need to define a secret key in the placeholder and in the Environment Variables. 
 
 
 The API requires your **region**. By default, it is set to the USA. If you are outside the US, update it using the following region codes:
