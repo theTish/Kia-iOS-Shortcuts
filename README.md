@@ -1,6 +1,6 @@
 # Kia-iOS-Shortcuts
 
-A method for creating iOS shortcuts that execute commands, such as Lock/Unlock, Start/Stop Climate.
+A Python Flask API for creating iOS shortcuts that execute commands, such as Lock/Unlock, Start/Stop Climate.
 
 ---
 ## Intro
