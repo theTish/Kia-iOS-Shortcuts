@@ -18,11 +18,14 @@ This uses the following Python package: [Hyundai Kia Connect API](https://github
 
 ## Installation
 
-There are placeholders within `# Initialize Vehicle Manager` that you will need to replace. These include your Kia account:
+You will need to add Environment Variables for the items below in order for the `# Initialize Vehicle Manager` to work. These include your Kia account:
 
 - **Username**  
 - **Password**  
 - **PIN**  
+
+Additionally, there is a placeholder for a Secret Key for extra security. You will need to define a secret key both in the code and wherever you host it.
+
 
 The API requires your **region**. By default, it is set to the USA. If you are outside the US, update it using the following region codes:
 
@@ -32,8 +35,6 @@ REGIONS = {
     3: REGION_USA,
     4: REGION_CHINA,
     5: REGION_AUSTRALIA }
-
-Additionally, there is a placeholder for a Secret Key for extra security. You will need to define a secret key both in the code and wherever you host it.
 
 If you have multiple Kia vehicles, the script includes logic to search for all vehicles associated with your account and match them by vehicle ID. If you have multiple vehicles, run the code without the direct lookup first to identify your vehicle ID, then update the script accordingly. If you only have one vehicle, you can remove the direct lookup.
 
