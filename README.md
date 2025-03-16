@@ -1,6 +1,6 @@
 # Kia-iOS-Shortcuts
 
-A Python Flask API for creating iOS shortcuts that execute commands, such as Lock/Unlock, Start/Stop Climate.
+This project provides a simple API to control your Kia vehicle using the Hyundai Kia Connect API. It includes features such as starting and stopping the climate control, locking and unlocking the car, and listing vehicles.
 
 ---
 ## Intro
@@ -16,16 +16,33 @@ This uses the following Python package: [Hyundai Kia Connect API](https://github
 
 ---
 
-## Installation
+## Setup
 
-You will need to add Environment Variables for the items below in order for the `# Initialize Vehicle Manager` to work. These include your Kia account:
+### 1. Create a GitHub repo and Vercel account
+- If you don’t have a GitHub or Vercel account, create one.
+- Fork this repo or clone it to your own GitHub account.
 
-- **Username**  
-- **Password**  
-- **PIN**  
+### 2. Set up Environment Variables
+In your project, set up the following environment variables:
+- `KIA_USERNAME`: Your Kia username.
+- `KIA_PASSWORD`: Your Kia password.
+- `KIA_PIN`: Your Kia PIN.
+- `SECRET_KEY`: Your Secret Key
+- `VEHICLE_ID`: Your Vehicle ID (needed if you have more than one vehicle tied to your account)
 
-Additionally, there is a placeholder for a Secret Key for extra security. You will need to define a secret key in the placeholder and in the Environment Variables. 
+### 3. Deploy on Vercel
+Once the repo is on GitHub, follow these steps to deploy it on Vercel:
+1. Go to [Vercel](https://vercel.com/) and log in with your GitHub account.
+2. Click on **New Project** and choose your repository.
+3. Set up your environment variables in Vercel’s dashboard:
+    - `KIA_USERNAME`: (value)
+    - `KIA_PASSWORD`: (value)
+    - `KIA_PIN`: (value)
+    - `SECRET_KEY`: (value)
+    - `VEHICLE_ID`: (value)
+4. Deploy the project.
 
+## Notes
 
 The API requires your **region**. By default, it is set to the USA. If you are outside the US, update it using the following region codes:
 
@@ -36,12 +53,43 @@ REGIONS = {
     4: REGION_CHINA,
     5: REGION_AUSTRALIA }
 
-If you have multiple Kia vehicles, the script includes logic to search for all vehicles associated with your account and match them by vehicle ID. If you have multiple vehicles, run the code without the direct lookup first to identify your vehicle ID, then update the script accordingly. If you only have one vehicle, you can remove the direct lookup.
 
 The climate command requires a Climate Request Option. By default, it is set to 72°F for 10 minutes, but you can modify this based on your preferences.
 
 ---
 
-## Notes
+## Running the Application
 
-There are additional commands available through the API, but this implementation currently supports only the four commands listed above.
+Once the environment variables are set, you can run the application in Replit:
+
+bash
+Copy code
+python app.py
+
+## API Endpoints
+
+GET /: Returns a welcome message.
+GET /list_vehicles: Lists all vehicles in your account.
+POST /start_climate: Starts the climate control of your vehicle.
+POST /stop_climate: Stops the climate control of your vehicle.
+POST /unlock_car: Unlocks your vehicle.
+POST /lock_car: Locks your vehicle.
+
+## Authorization
+
+For security, each API request must include an Authorization header with the correct SECRET_KEY. Example:
+
+bash
+Copy code
+Authorization: YourCustomSecretKeyHere
+
+## Notes for Developers
+
+The SECRET_KEY and VEHICLE_ID values are loaded from environment variables to keep sensitive information secure.
+If you need to deploy this project on another platform (e.g., Vercel or Heroku), make sure to set up the environment variables there as well.
+The app uses Flask for handling requests. You can modify or extend it as needed for additional vehicle control features.
+
+## License
+
+This project is licensed under the MIT License – see the LICENSE file for details.
+
