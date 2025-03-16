@@ -78,37 +78,6 @@ The climate command requires a Climate Request Option. By default, it is set to 
 
 ---
 
-## Running the Application
-
-Once the environment variables are set, you can run the application in Replit:
-
-bash
-Copy code
-python app.py
-
-## API Endpoints
-
-GET /: Returns a welcome message.
-GET /list_vehicles: Lists all vehicles in your account.
-POST /start_climate: Starts the climate control of your vehicle.
-POST /stop_climate: Stops the climate control of your vehicle.
-POST /unlock_car: Unlocks your vehicle.
-POST /lock_car: Locks your vehicle.
-
-## Authorization
-
-For security, each API request must include an Authorization header with the correct SECRET_KEY. Example:
-
-bash
-Copy code
-Authorization: YourCustomSecretKeyHere
-
-## Notes for Developers
-
-The SECRET_KEY and VEHICLE_ID values are loaded from environment variables to keep sensitive information secure.
-If you need to deploy this project on another platform (e.g., Vercel or Heroku), make sure to set up the environment variables there as well.
-The app uses Flask for handling requests. You can modify or extend it as needed for additional vehicle control features.
-
 ## License
 
 This project is licensed under the MIT License – see the LICENSE file for details.
