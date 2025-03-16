@@ -56,9 +56,10 @@ You can create an iOS Shortcut to interact with your Kia Vehicle Control API eas
         - Headers: Tap "Add New Field" and enter:
             - Key: Authorization
             - Value: YourCustomSecretKeyHere (replace this with your actual secret key).
-    6. Tap Next, and then give your shortcut a name, such as "Start Climate" or "Unlock Car."
-    7. Tap Done to save the shortcut.
-    8. Run the Shortcut: When you run the shortcut, it will send a request to your API, performing the action you configured (e.g., starting the climate control or unlocking the car).
+    6. In the search bar, type "Show Result" and select it. (shows Contents of URL)
+    7. Tap the drop-down arrow at the top of the shortcut to Rename and Choose Icon.
+    8. Tap Done to save the shortcut.
+    9. Run the Shortcut: When you run the shortcut, it will send a request to your API, performing the action you configured (e.g., starting the climate control or unlocking the car).
 
 ## Notes
 
