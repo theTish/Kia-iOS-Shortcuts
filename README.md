@@ -73,6 +73,7 @@ REGIONS = {
     5: REGION_AUSTRALIA }
 
 
+
 The climate command requires a Climate Request Option. By default, it is set to 72°F for 10 minutes, but you can modify this based on your preferences.
 
 ---
