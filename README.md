@@ -40,7 +40,25 @@ Once the repo is on GitHub, follow these steps to deploy it on Vercel:
     - `KIA_PIN`: (value)
     - `SECRET_KEY`: (value)
     - `VEHICLE_ID`: (value)
-4. Deploy the project.
+
+### 4. Deploy the project.
+
+### 5. Create IOS Shortcuts
+You can create an iOS Shortcut to interact with your Kia Vehicle Control API easily. Follow these steps to set up your Shortcut:
+
+    1. Open the Shortcuts app on your iPhone.
+    2. Tap the "+" to create a new shortcut.
+    3. Tap "Add Action".
+    4. In the search bar, type "Get Contents of URL" and select it.
+    5. Set the following options for the "Get Contents of URL" action:
+        - URL: Enter the URL of your deployed API endpoint (e.g., https://your-api-url.com/start_climate).
+        - Method: Choose POST (or GET if the endpoint requires GET).
+        - Headers: Tap "Add New Field" and enter:
+            - Key: Authorization
+            - Value: YourCustomSecretKeyHere (replace this with your actual secret key).
+    6. Tap Next, and then give your shortcut a name, such as "Start Climate" or "Unlock Car."
+    7. Tap Done to save the shortcut.
+    8. Run the Shortcut: When you run the shortcut, it will send a request to your API, performing the action you configured (e.g., starting the climate control or unlocking the car).
 
 ## Notes
 
