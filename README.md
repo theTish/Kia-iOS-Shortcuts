@@ -27,7 +27,7 @@ In your project, set up the following environment variables:
 - `KIA_USERNAME`: Your Kia username.
 - `KIA_PASSWORD`: Your Kia password.
 - `KIA_PIN`: Your Kia PIN.
-- `SECRET_KEY`: Your Secret Key
+- `SECRET_KEY`: Your Secret Key (this is a custom password you create. Add whatever value you'd like)
 - `VEHICLE_ID`: Your Vehicle ID (needed if you have more than one vehicle tied to your account)
 
 ### 3. Deploy on Vercel
@@ -38,7 +38,7 @@ Once the repo is on GitHub, follow these steps to deploy it on Vercel:
     - `KIA_USERNAME`: (value)
     - `KIA_PASSWORD`: (value)
     - `KIA_PIN`: (value)
-    - `SECRET_KEY`: (value)
+    - `SECRET_KEY`: (value) (your own custom password for more security)
     - `VEHICLE_ID`: (value)
 
 ### 4. Deploy the project.
